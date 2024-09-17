@@ -1,0 +1,159 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#main {
+  margin-left: 300px;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../assets/img/SP-Background2.jpg) top center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  /* Dark overlay for better text contrast */
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  color: white;
+}
+
+.hero h2 {
+  margin: 0;
+  margin-left: 30px;
+  font-size: 80px;
+  /* Adjusted to fit better on larger screens */
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.hero p {
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.hero p span {
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.hero .social-links {
+  margin-top: 25px;
+}
+
+.hero .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  /* White with transparency for softer look */
+  line-height: 1;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.hero .social-links a:hover {
+  color: #00aced;
+  /* Accent color on hover */
+}
+
+/*--------------------------------------------------------------
+# Mobile Responsiveness
+--------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  #main {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 50px 0;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #main {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .social-links a {
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  #main {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .container {
+    padding: 0 20px;
+  }
+
+  .hero img {
+    object-fit: cover;
+    /* Adjust image for small devices */
+  }
+
+  .social-links a {
+    margin-right: 10px;
+  }
+}

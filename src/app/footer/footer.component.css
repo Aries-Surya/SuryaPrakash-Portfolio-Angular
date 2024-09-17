@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------
+# Global Footer (Responsive)
+--------------------------------------------------------------*/
+
+.footer {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-size: 14px;
+    padding: 40px 0;
+    position: relative;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    text-align: center;
+    /* Ensures centered content on smaller screens */
+}
+
+.footer .copyright p {
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    /* Centering text for responsive view */
+}
+
+.footer .credits {
+    margin-top: 4px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Media queries for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .footer {
+        padding: 30px 20px;
+        /* Adjust padding for tablet view */
+        font-size: 13px;
+        /* Adjust font size for tablets */
+    }
+
+    .footer .copyright p {
+        font-size: 13px;
+        /* Adjust copyright text size for tablets */
+    }
+
+    .footer .credits {
+        font-size: 12px;
+        /* Adjust credits text size for tablets */
+        margin-top: 6px;
+    }
+}
+
+/* Media queries for mobile phones */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 15px;
+        /* Reduce padding for mobile view */
+        font-size: 12px;
+        /* Slightly smaller font size on mobile */
+    }
+
+    .footer .copyright p {
+        font-size: 12px;
+        /* Adjust copyright text size on mobile */
+    }
+
+    .footer .credits {
+        font-size: 12px;
+        /* Adjust credits text size on mobile */
+        margin-top: 8px;
+    }
+}
+
+/* Media queries for extra-small mobile devices */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 10px;
+        /* Further reduce padding for extra-small devices */
+        font-size: 11px;
+        /* Further reduce font size for very small screens */
+    }
+
+    .footer .copyright p {
+        font-size: 11px;
+        /* Adjust copyright text size for very small screens */
+    }
+
+    .footer .credits {
+        font-size: 11px;
+        /* Adjust credits text size for very small screens */
+        margin-top: 10px;
+    }
+}
