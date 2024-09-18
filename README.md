@@ -20,11 +20,11 @@ If you wish to replicate this portfolio for yourself, you can duplicate this rep
 * Create the Folder to clone the repository
 * Clone repository
 ```cmd
-  git clone https://github.com/Aries-Surya/SP-Portfolio.git
+  git clone https://github.com/Aries-Surya/SuryaPrakash-Portfolio-Angular.git
 ```
 * Change Directory
 ```cmd
-  cd ./SuryaPrakash-Portfolio
+  cd ./SuryaPrakash-Portfolio-Angular
 ```
 * Install npm
 ```cmd
@@ -38,7 +38,10 @@ If you wish to replicate this portfolio for yourself, you can duplicate this rep
 
 * Run the build
 ```cmd
-  cd dist/SuryaPrakash-Portfolio
+  cd .\dist\suryaprakash-portfolio-angular\
+```
+```cmd
+npm install -g http-server
 ```
 ```cmd
   http-server
@@ -53,7 +56,3 @@ This will host the angular project throughout the intranet and the url will be d
 ## Demo
 
 URL: https://suryaprakash-portfolio.vercel.app
-
-## Screenshots
-
-![Portfolio Screenshot](https://i.ibb.co/s3rdNtp/SP-Portfolio-IMG.png)
