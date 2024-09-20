@@ -129,6 +129,11 @@ h6 {
         margin-left: 0;
     }
 
+    .p-heading {
+        margin-left: 0;
+        /* text-align: center; */
+    }
+
     .hero {
         padding: 50px 0;
         background-position: center;
@@ -174,7 +179,7 @@ h6 {
     }
 
     .basic-3 .p-heading {
-        text-align: left;
+        text-align: justify;
         /* Align text to the left on mobile */
     }
 
