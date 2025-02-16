@@ -13,10 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Build & Push Image
-      env:
-        DOCKERPW: ${{ vars.DOCKERPW }}
-      run: |
-        echo "$DOCKERPW" | docker login -u "ariessurya" --password-stdin
-        docker image build -t ariessurya/suryaprakash-portfolio:latest .
-        docker push ariessurya/suryaprakash-portfolio:latest
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKERHUB_PAT }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+    - name: Build the Docker image
+      run: docker build -t ariessurya/suryaprakash-portfolio:latest .
+
+    - name: Push the Docker image
+      run: docker push ariessurya/suryaprakash-portfolio:latest
