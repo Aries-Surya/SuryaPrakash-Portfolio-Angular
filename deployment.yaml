@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suryaprakash-portfolio
+  labels:
+    app: suryaprakash-portfolio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: suryaprakash-portfolio
+  template:
+    metadata:
+      labels:
+        app: suryaprakash-portfolio
+    spec:
+      containers:
+      - name: suryaprakash-portfolio
+        image: ariessurya/suryaprakash-portfolio:latest
+        ports:
+        - containerPort: 8085
