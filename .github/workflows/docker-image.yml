@@ -12,17 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Extract Tag from Commit Message
-      # Extract the tag from the commit message (assumes the tag is in format "tag:your-tag")
-      id: extract-tag
-      run: |
-        TAG=$(git log -1 --pretty=%B | grep -oP '(?<=tag:)\S+')
-        echo "TAG=${TAG}"
-        echo "::set-output name=tag::${TAG}"
+
     - name: Build & Push Image
       # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "ariessurya" --password-stdin
         docker image build -t ariessurya/suryaprakash-portfolio:${{ steps.extract-tag.outputs.tag }} .
-        docker push ariessurya/suryaprakash-portfolio:${{ steps.extract-tag.outputs.tag }}
+        docker push ariessurya/suryaprakash-portfolio:latest
