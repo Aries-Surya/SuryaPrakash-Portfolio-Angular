@@ -14,8 +14,9 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Build & Push Image
-      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      env:
+        DOCKERPW: ${{ vars.DOCKERPW }}
       run: |
-        docker login -u "ariessurya" -p $DOCKERPW
+        echo "$DOCKERPW" | docker login -u "ariessurya" --password-stdin
         docker image build -t ariessurya/suryaprakash-portfolio:latest .
         docker push ariessurya/suryaprakash-portfolio:latest
