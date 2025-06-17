@@ -4,15 +4,21 @@
 
             <div class="section-title">
                 <h2>About</h2>
-                <p style="text-align:justify;">A passionate software developer with expertise in Python, JavaScript, C, HTML, CSS and Java. I
-                    enjoy tackling complex challenges and building innovative solutions. My repositories showcase
-                    projects in web development, Cyber Security and machine learning. I believe in the power of
-                    collaboration and
-                    welcome contributions to my projects. Let's connect and make an impact in the world of software
-                    development.
-                </p>
+                <ul>
+                    <li>I am an enthusiastic Software Developer eager to kick off my career in <b>Software Development,
+                            DevOps, Cloud Computing, Full Stack Development, and Networking.</b></li>
+                    <li>I take pleasure in creating quick and user-friendly applications and focus on <b>continuous
+                            delivery/integration pipelines</b>, along with a passion for <b>automation</b>.</li>
+                    <li>I possess strong skills in addressing <b>technical challenges</b>, enhancing processes, and
+                        acquiring new technologies.</li>
+                    <li>With hands-on experience from <b>Zoho Corporation</b> and a solid academic foundation, I
+                        specialize in technologies like <b>Angular, Django, Docker, Kubernetes, GitHub Actions,
+                            Terraform, and more.</b></li>
+                    <li>I am a <b>quick learner</b> and I am always looking for new challenges and opportunities to
+                        grow.</li>
+                </ul>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
                     <img src="assets/img/SP-Library.jpg" class="img-fluid" alt="sdfbcw">
@@ -22,16 +28,21 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i><strong>Birthday:</strong><span>11/Oct/2003</span></li>
-                                <li><i class="bi bi-chevron-right"></i><strong>Phone:</strong> <span>Private Number</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chennai, Tamil Nadu</span></li>
+                                <li><i class="bi bi-chevron-right"></i><strong>Phone:</strong> <span>Private
+                                        Number</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Avadi, Chennai,
+                                        Tamil Nadu - 600072</span></li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BE-CSE</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong><span> <a href="mailto:suryaprakash.g.official@gmail.com">suryaprakash.g.official&#64;gmail.com</a></span>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{ age }}
+                                        Years</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BE-CSE
+                                        (2021-2025)</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong><span> <a
+                                            href="mailto:suryaprakash.g.official@gmail.com">suryaprakash.g.official&#64;gmail.com</a></span>
                                 </li>
                             </ul>
                         </div>
@@ -41,3 +52,17 @@
         </div>
     </section>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const birthDate = new Date('2003-10-11'); // Your birthday
+        const ageElement = document.getElementById('age');
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDifference = today.getMonth() - birthDate.getMonth();
+        if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        ageElement.textContent = age + ' Years';
+    });
+</script>
