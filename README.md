@@ -6,52 +6,67 @@ If you wish to replicate this portfolio for yourself, you can duplicate this rep
 
 ## Installation
 
-#### Steps: 
+#### Steps:
+
 * Install NodeJS -> https://nodejs.org/en/download
 * Set Environment Variables on ur PC
 * install angular
+
 ```cmd
  npm install –g @angular/cli 
 ```
+
 * To check the version
+
 ```cmd
  ng version
 ```
+
 * Create the Folder to clone the repository
 * Clone repository
+
 ```cmd
   git clone https://github.com/Aries-Surya/SuryaPrakash-Portfolio-Angular.git
 ```
+
 * Change Directory
+
 ```cmd
   cd ./SuryaPrakash-Portfolio-Angular
 ```
+
 * Install npm
+
 ```cmd
   npm install
 ```
+
 * After Installing Run the AngularJS
+
 ```cmd
   ng serve
 ```
-* Check this URL: http://localhost:4200
 
+* Check this URL: http://localhost:4200
 * Run the build
+
 ```cmd
-  cd .\dist\suryaprakash-portfolio-angular\
+  cd .\dist\suryaprakash-portfolio-angular\browser
 ```
+
 ```cmd
 npm install -g http-server
 ```
+
 ```cmd
   http-server
 ```
+
 This will host the angular project throughout the intranet and the url will be displayed
 
 ## Authors
 
 - [@Aries-Surya](https://www.github.com/aries-surya)
-
 
 ## Demo
 
