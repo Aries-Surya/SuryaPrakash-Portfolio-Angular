@@ -3,4 +3,4 @@ services:
     image: ariessurya/suryaprakash-portfolio:latest
     ports:
       - 80:80 # Map the container port 80 to the host port 80
-    container_name: surya-prakash-portfolio-angular
+    container_name: suryaprakash-portfolio
