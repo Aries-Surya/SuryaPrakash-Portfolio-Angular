@@ -1,0 +1,37 @@
+<main id="main">
+    <section id="certification" class="certification">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certification</h2>
+            </div>
+
+            <div class="row" data-aos="fade-in">
+                <div class="content">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <div class="slideshow-container">
+                                            <button (click)="prevImage()">&#10094;</button>
+                                            <img [src]="certificateImages[currentIndex]" alt="Certificate"
+                                                style="width:200%; max-height:600px; object-fit:contain;" />
+                                            <button (click)="nextImage()">&#10095;</button>
+                                        </div>
+                                        <div style="text-align:center; margin-top:10px;">
+                                            <span *ngFor="let img of certificateImages; let i = index"
+                                                [class.active]="i === currentIndex"
+                                                style="height:15px;width:15px;margin:0 2px;display:inline-block;border-radius:50%;background-color:#bbb;cursor:pointer;"
+                                                (click)="currentIndex = i">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
