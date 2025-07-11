@@ -1,0 +1,16 @@
+<main id="main">
+    <section id="badges" class="badges">
+        <div class="container">
+            <div class="section-title">
+                <h2>Earned Badges</h2>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee">
+                    <img *ngFor="let img of badgeImages" [src]="img" alt="Badge" class="badge-img" />
+                    <!-- Duplicate for seamless loop -->
+                    <img *ngFor="let img of badgeImages" [src]="img" alt="Badge" class="badge-img" />
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
