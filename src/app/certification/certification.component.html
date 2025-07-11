@@ -6,16 +6,17 @@
             </div>
 
             <div class="row" data-aos="fade-in">
-                <div class="content">
+                <div class="content w-100">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-12 col-md-10">
                                 <div class="row justify-content-center">
-                                    <div class="col-md-6">
-                                        <div class="slideshow-container">
+                                    <div class="col-12 col-md-8">
+                                        <div class="slideshow-container" (mouseenter)="stopAutoSlide()"
+                                            (mouseleave)="startAutoSlide()">
                                             <button (click)="prevImage()">&#10094;</button>
                                             <img [src]="certificateImages[currentIndex]" alt="Certificate"
-                                                style="width:200%; max-height:600px; object-fit:contain;" />
+                                                class="certificate-img" />
                                             <button (click)="nextImage()">&#10095;</button>
                                         </div>
                                         <div style="text-align:center; margin-top:10px;">
