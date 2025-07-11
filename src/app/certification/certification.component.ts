@@ -26,7 +26,6 @@ export class CertificationComponent implements OnInit, OnDestroy {
     'assets/img/certify/MSME IOT Certificate_page_1.png',
     'assets/img/certify/Introduction to Artificial Intelligence_page_1.png',
     'assets/img/certify/Google Cloud Fundamentals Core Infrastructure_page_1.png',
-    'assets/img/certify/FSD Client Side-Front end Certification_page_1.png',
     'assets/img/certify/DevOps_Essentials_Badge20240906-7-hke9i3_page_1.png',
     'assets/img/certify/Design a dream destination using Microsoft_page_1.png',
     'assets/img/certify/Defsecone Networking WrkShop_page_1.png',
